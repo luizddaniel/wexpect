@@ -2196,7 +2196,7 @@ class Wtty:
             else:
                 endPoint = self.getPoint(endOff)
             
-            s = self.__consout.ReadConsoleOutputCharacter(readlen, startCo)
+            s = self.__consout.ReadConsoleOutputCharacter(int(readlen), startCo)
             ln = len(s)
             self.lastRead += ln
             self.totalRead += ln
